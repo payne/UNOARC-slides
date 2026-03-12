@@ -6,7 +6,8 @@
       "Bash(marp --server --port 8080 presentation.md)",
       "Bash(which npx:*)",
       "Bash(npx @marp-team/marp-cli --server --port 8080 presentation.md)",
-      "Bash(npx @marp-team/marp-cli --server --port 8080 /home/mpayne/UNOARC-slides)"
+      "Bash(npx @marp-team/marp-cli --server --port 8080 /home/mpayne/UNOARC-slides)",
+      "Bash(git -C /home/mpayne/UNOARC-slides remote -v)"
     ]
   }
 }

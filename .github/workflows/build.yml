@@ -1,0 +1,34 @@
+name: Build Presentation
+
+on:
+  push:
+    paths:
+      - '**.md'
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build HTML and PDF
+        uses: marp-team/marp-action@v2
+        with:
+          input: presentation.md
+          html: true
+
+      - name: Rename HTML output to index.html
+        run: mv presentation.html index.html
+
+      - name: Commit and push output files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html presentation.pdf
+          git diff --cached --quiet || git commit -m "chore: rebuild presentation [skip ci]"
+          git push
