@@ -3,7 +3,7 @@ name: Build Presentation
 on:
   push:
     paths:
-      - '**.md'
+      - 'presentation.md'
     branches:
       - main
 
