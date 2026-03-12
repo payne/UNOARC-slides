@@ -7,7 +7,17 @@
       "Bash(which npx:*)",
       "Bash(npx @marp-team/marp-cli --server --port 8080 presentation.md)",
       "Bash(npx @marp-team/marp-cli --server --port 8080 /home/mpayne/UNOARC-slides)",
-      "Bash(git -C /home/mpayne/UNOARC-slides remote -v)"
+      "Bash(git -C /home/mpayne/UNOARC-slides remote -v)",
+      "Bash(git -C /home/mpayne/UNOARC-slides status && git -C /home/mpayne/UNOARC-slides log --oneline -5)",
+      "Bash(git -C /home/mpayne/UNOARC-slides add .github/workflows/build.yml && git -C /home/mpayne/UNOARC-slides commit -m \"$\\(cat <<'EOF'\nci: trigger build only on changes to presentation.md\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git -C /home/mpayne/UNOARC-slides push)",
+      "Bash(git -C /home/mpayne/UNOARC-slides status)",
+      "Bash(git -C /home/mpayne/UNOARC-slides log --oneline -5 && git -C /home/mpayne/UNOARC-slides show --stat HEAD~2)",
+      "Bash(git -C /home/mpayne/UNOARC-slides status -u)",
+      "Bash(ls /home/mpayne/UNOARC-slides/ && git -C /home/mpayne/UNOARC-slides ls-files --others --exclude-standard --directory)",
+      "Bash(git -C /home/mpayne/UNOARC-slides ls-files interaction-log.md && cat /home/mpayne/UNOARC-slides/.gitignore 2>/dev/null || echo \"no .gitignore\")",
+      "Bash(git -C /home/mpayne/UNOARC-slides diff interaction-log.md)",
+      "Bash(git -C /home/mpayne/UNOARC-slides add .claude/settings.local.json && git -C /home/mpayne/UNOARC-slides commit -m \"$\\(cat <<'EOF'\nchore: update Claude local settings\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>\nEOF\n\\)\" && git -C /home/mpayne/UNOARC-slides push)"
     ]
   }
 }
