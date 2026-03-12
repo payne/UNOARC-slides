@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:docs.google.com)",
+      "WebFetch(domain:doc-04-14-docstext.googleusercontent.com)",
+      "Bash(marp --server --port 8080 presentation.md)",
+      "Bash(which npx:*)",
+      "Bash(npx @marp-team/marp-cli --server --port 8080 presentation.md)",
+      "Bash(npx @marp-team/marp-cli --server --port 8080 /home/mpayne/UNOARC-slides)"
+    ]
+  }
+}
